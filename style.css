@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Custom Properties */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "PT Serif", serif;
+}
+
+body {
+    min-height: 100vh;
+    /* cursor: none; */
+}
+
+:root {
+    --basic-theme: #ff234f;
+    /* #ff3c00 */
+}
+
+/* Important is used because CSS follow Top-down approach  OR  I can paste the code at the bottom */
+.hidden {
+    display: none !important;
+}
+
+.customMouse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(58, 58, 58);
+    transition: transform 0.05s ease;
+    border-radius: 100%;
+}
+
+.small-font {
+    font-size: 13px;
+    color: grey;
+}
+
+.btns {
+    /* to apply transform property on it */
+    display: inline-block;
+    font-size: 18px;
+    color: var(--basic-theme);
+    background: none;
+    transition: transform 0.3s ease;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btns:hover {
+    cursor: none;
+    background-color: #a8a8a82b;
+    transform: scale(1.1);
+}
+
+.main-container {
+    overflow-x: hidden;
+}
+
+/* ASIDE */
+
+.nav {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 15px;
+    margin: auto;
+
+}
+
+.nav .logo::before {
+    height: 15px;
+    width: 15px;
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: -10px;
+    border-bottom: 5px solid var(--basic-theme);
+    border-left: 5px solid var(--basic-theme);
+}
+
+.nav .logo {
+    position: relative;
+}
+
+.nav .logo::after {
+    height: 15px;
+    width: 15px;
+    content: '';
+    right: -10px;
+    position: absolute;
+    border-top: 5px solid var(--basic-theme);
+    border-right: 5px solid var(--basic-theme);
+}
+
+.nav i {
+    padding: 0 15px;
+}
+
+.nav .logo span {
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.nav .dropdown-icon {
+    display: none;
+    font-size: 30px;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav a {
+    cursor: none;
+    margin: 0 10px;
+    transition: 0.25s ease;
+    color: rgb(92, 92, 92);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+/* Used by Javascript */
+.nav a:hover {
+    font-size: 110%;
+    color: var(--basic-theme);
+    background: #a8a8a82b;
+    transform: scale(1.1);
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    width: 80vw;
+    margin: auto;
+    padding: 30px;
+}
+
+/* can also do this instead of margin-top:200px to make the box in the center of the screen */
+.home .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.home {
+    position: relative;
+    margin: 200px 100px 0 0;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.home h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.home h2 span {
+    color: var(--basic-theme);
+}
+
+.home a {
+    position: absolute;
+    bottom: 0px;
+}
+
+.home .myImg::before {
+    content: ' ';
+    position: absolute;
+    background: conic-gradient(from 180deg at 50% 50%,
+            #0aefff -69.37deg,
+            #0f83ff 31.88deg,
+            #b056e7 120deg,
+            #ff9966 204.37deg,
+            #0aefff 290.63deg,
+            #0f83ff 391.87deg);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+.home .myImg {
+    position: relative;
+}
+
+.home .myImg img {
+    width: 15rem;
+    border-radius: 100%;
+}
+
+.home .row p {
+    margin-bottom: 60px;
+}
+
+.title::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    bottom: 0;
+    border-bottom: 5px solid var(--basic-theme);
+}
+
+.title {
+    position: relative;
+    padding-bottom: 10px;
+    /* for before and after */
+    display: inline-block;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.title::after {
+    position: absolute;
+    content: '';
+    width: 35%;
+    bottom: -10px;
+    left: 0;
+    border-bottom: 5px solid var(--basic-theme);
+}
+
+/* SKills */
+
+.skills {
+    display: flex;
+    align-items: center;
+    margin: 80px 0px;
+}
+
+.slides-container {
+    /* box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); */
+    mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+    width: 70%;
+    overflow-x: hidden;
+    margin-left: 80px;
+}
+
+.slides {
+    width: 200%;
+    border-radius: 30px;
+    display: flex;
+    animation: bannermove 9s linear infinite;
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slides div {
+    width: 100%;
+}
+
+.slides ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.slides li {
+    width: 100%;
+}
+
+.slides img {
+    width: 90px;
+}
+
+.slides img {
+    width: 60px;
+    margin: 0 25px;
+}
+
+/* Projects */
+
+.projects h1 {
+    font-size: 55px;
+    text-align: center;
+}
+
+.projects-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 60px;
+}
+
+.video-container video {
+    max-width: 85%;
+    padding: 40px;
+    padding-bottom: 0px;
+    border-radius: 15px;
+    margin: 10px 0px;
+    transition: padding 0.1s ease-in-out;
+}
+
+.video-container video:hover {
+    cursor: none;
+    padding: 0px;
+}
+
+/* Projects video */
+#first {
+    background: url("Images/bg (1).png");
+}
+
+#sec {
+    background: url("Images/bg (3).png");
+}
+
+#third {
+    background: url("Images/bg (3).png") center;
+}
+
+#fourth {
+    background: url("Images/bg (2).png") center/cover;
+}
+
+/* About me and Contact information section */
+
+.about-contact {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    margin-top: 100px;
+}
+
+/* ABOUT ME */
+
+.aboutme .row .intro {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.aboutme .row {
+    width: 60%;
+    line-height: 30px;
+}
+
+.aboutme .intro span {
+    color: var(--basic-theme);
+    font-weight: bold;
+}
+
+/* Contact */
+
+.moreInfo {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    margin: 30px 0;
+}
+
+.contactInfo {
+    font-size: 17px;
+}
+
+.contactInfo div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfo span {
+    font-weight: bold;
+}
+
+.send-msg {
+    max-width: 450px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.send-msg input,
+#message {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 7px;
+    padding: 12px;
+}
+
+#message {
+    height: 150px;
+    font-family: "PT Serif", serif;
+    line-height: 24px;
+}
+
+.send-msg input:hover,
+.send-msg textarea:hover {
+    outline: 1px solid rgb(0, 140, 255);
+}
+
+.send-msg button {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgb(0, 140, 255);
+    /* background-color: var(--basic-theme); */
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px;
+    margin-top: 25px;
+}
+
+.send-msg button:hover {
+    background-color: rgb(0, 124, 226);
+    cursor: pointer;
+}
+
+.contact-details h3 {
+    margin: 20px 0;
+}
+
+
+
+footer {
+    font-size: 14px;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+footer p {
+    padding: 5px;
+    margin: 0 10px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Responsive */
+
+/* To adjust the projects video w.r.t screen size */
+@media (min-width:1400px) {
+    .video-container video {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .nav {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .nav a {
+        margin: 0;
+    }
+}

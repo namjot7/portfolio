@@ -1,0 +1,116 @@
+/* Root properties */
+
+.title {
+    font-size: 25px;
+}
+
+.btns-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Nav bar */
+.nav .dropdown-icon {
+    display: block;
+}
+
+.nav ul {
+    display: none;
+}
+
+/* Main Content */
+
+.main-content {
+    width: 100vw;
+}
+
+/* Home section */
+
+.home {
+    margin: 20px 0px;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+}
+
+.home-info {
+    margin-bottom: 50px;
+}
+
+.home h2 {
+    font-size: 25px;
+}
+
+.home .myImg img {
+    width: 10rem;
+}
+
+/* skills section */
+
+.skills {
+    display: block;
+    margin: 40px 0;
+}
+
+.skills h1 {
+    margin-bottom: 30px;
+}
+
+.slides-container {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+}
+
+.slides {
+    animation: slide-animation 7s linear infinite;
+}
+
+/* Projects section */
+
+.projects h1 {
+    font-size: 32px;
+}
+
+.projects-container {
+    margin-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.video-container video {
+    max-width: 96%;
+    padding: 25px;
+    padding-bottom: 0;
+}
+
+/* About section */
+.about-contact{
+    grid-template-columns: 1fr;
+}
+.aboutme .row {
+    width: 100%;
+}
+
+/* Contact section */
+
+.contactInfo {
+    margin: 25px 0;
+}
+
+.contactInfo .title {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.send-msg {
+    padding: 20px;
+}
+
+/* Footer */
+
+footer {
+    font-size: 11px;
+}
+
+footer p {
+    padding: 2px;
+}
