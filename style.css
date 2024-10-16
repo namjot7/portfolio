@@ -13,6 +13,10 @@
     font-family: "PT Serif", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     /* cursor: none; */
@@ -135,6 +139,7 @@ body {
     color: rgb(92, 92, 92);
     border-radius: 10px;
     padding: 5px 10px;
+    transition: 0.5s all ease;
 }
 
 /* Used by Javascript */
@@ -202,7 +207,7 @@ body {
 }
 
 .home .myImg img {
-    width: 15rem;
+    width: 17rem;
     border-radius: 100%;
 }
 
@@ -256,10 +261,10 @@ body {
     width: 200%;
     border-radius: 30px;
     display: flex;
-    animation: bannermove 9s linear infinite;
+    animation: skillsSlider 10s linear infinite;
 }
 
-@keyframes bannermove {
+@keyframes skillsSlider {
     0% {
         transform: translateX(0%);
     }
@@ -275,6 +280,7 @@ body {
 
 .slides ul {
     display: flex;
+    align-items: center;
     list-style-type: none;
 }
 
@@ -315,25 +321,24 @@ body {
 }
 
 .video-container video:hover {
-    cursor: none;
     padding: 0px;
 }
 
 /* Projects video */
 #first {
-    background: url("Images/bg (1).png");
+    background: url("resources/images/bg (1).png");
 }
 
 #sec {
-    background: url("Images/bg (3).png");
+    background: url("resources/images/bg (3).png");
 }
 
 #third {
-    background: url("Images/bg (3).png") center;
+    background: url("resources/images/bg (3).png") center;
 }
 
 #fourth {
-    background: url("Images/bg (2).png") center/cover;
+    background: url("resources/images/bg (2).png") center/cover;
 }
 
 /* About me and Contact information section */
@@ -383,13 +388,13 @@ body {
     font-weight: bold;
 }
 
-.send-msg {
+.contact-form-container {
     max-width: 450px;
     background-color: white;
     border-radius: 10px;
 }
 
-.send-msg input,
+.contact-form-container input,
 #message {
     font-size: 0.95rem;
     margin-top: 10px;
@@ -404,12 +409,12 @@ body {
     line-height: 24px;
 }
 
-.send-msg input:hover,
-.send-msg textarea:hover {
+.contact-form-container input:hover,
+.contact-form-container textarea:hover {
     outline: 1px solid rgb(0, 140, 255);
 }
 
-.send-msg button {
+#submit {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -422,7 +427,7 @@ body {
     margin-top: 25px;
 }
 
-.send-msg button:hover {
+#submit:hover {
     background-color: rgb(0, 124, 226);
     cursor: pointer;
 }
@@ -430,8 +435,6 @@ body {
 .contact-details h3 {
     margin: 20px 0;
 }
-
-
 
 footer {
     font-size: 14px;

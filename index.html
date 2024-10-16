@@ -9,7 +9,7 @@
     <link rel="stylesheet" media="only screen and (max-width:800px)" href="styleResponsive.css">
 
     <!-- favIcon and Font awesome icons (cdnjs) -->
-    <link rel="icon" href="Images/myLogo.jpg" type="image/x-icon">
+    <!-- <link rel="icon" href="Images/myLogo.jpg" type="image/x-icon"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,17 +25,16 @@
             <div class="logo"><span>Namjot</span></div>
             <div class="dropdown-icon"><i class="fa-sharp fa-solid fa-bars"></i></div>
             <ul>
-                <li><a href="#" class="active"><i class="fa-sharp fa-solid fa-house-chimney"></i>Home</a></li>
-                <li><a href="#"><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#"><i class="fa fa-list"></i>Services</a></li>
-                <li><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-                <li><a href="#"><i class="fa fa-phone"></i>Contact</a></li>
+                <li><a href="" class="active"><i class="fa-sharp fa-solid fa-house-chimney"></i>Home</a></li>
+                <!-- <li><a href="#projects"><i class="fa fa-list"></i>Services</a></li> -->
+                <li><a href="#projects"><i class="fa fa-briefcase"></i>Projects</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="#contact"><i class="fa fa-phone"></i>Contact</a></li>
             </ul>
         </div>
 
         <!-- Main content -->
-
-        <div class="main-content">
+        <div class="main-content" id="home">
 
             <!-- Home page -->
             <section class="home">
@@ -48,13 +47,14 @@
                     </p>
                 </div>
                 <div class="myImg">
-                    <img src="Images/myPhoto.jpg" alt="">
+                    <img src="resources/images/myphoto.jpg" alt="">
                 </div>
             </section>
 
             <div class="btns-container">
-                <button class="btns">Download Resume</button>
-                <button class="btns">Contact Me</button>
+                <!-- download="resources/Namjot_Resume.pdf" -->
+                <a href="resources/Namjot_Resume.pdf"><button class="btns">Download Resume</button></a>
+                <a href="#contact"><button class="btns">Contact Me</button></a>
             </div>
 
             <!-- Skills -->
@@ -64,24 +64,28 @@
                     <div class="slides">
                         <div>
                             <ul>
-                                <li><img src="Images/html.webp" alt="html"></li>
-                                <li><img src="Images/css.webp" alt="css"></li>
-                                <li><img src="Images/javascript.png" alt="javascript"></li>
-                                <li><img src="Images/nodejs.png" alt="nodejs"></li>
-                                <li><img src="Images/mongodb.png" alt="mongodb"></li>
-                                <li><img src="Images/java.png" alt="java"></li>
-                                <li><img src="Images/dsa.png" alt="dsa"></li>
+                                <li><img src="resources/images/html.webp" alt="html"></li>
+                                <li><img src="resources/images/css.webp" alt="css"></li>
+                                <li><img src="resources/images/javascript.png" alt="javascript"></li>
+                                <li><img src="resources/images/tailwindcss.png" alt="tailwindcss"></li>
+                                <li><img src="resources/images/react.webp" alt="reactjs"></li>
+                                <li><img src="resources/images/nodejs.png" alt="nodejs"></li>
+                                <li><img src="resources/images/mongodb.png" alt="mongodb"></li>
+                                <li><img src="resources/images/java.png" alt="java"></li>
+                                <li><img src="resources/images/dsa.png" alt="dsa"></li>
+                                <li><img src="resources/images/figma.png" alt="figma"></li>
+                                <li><img src="resources/images/github.png" alt="github"></li>
                             </ul>
                         </div>
                         <div>
                             <ul>
-                                <li><img src="Images/html.webp" alt="html"></li>
-                                <li><img src="Images/css.webp" alt="css"></li>
-                                <li><img src="Images/javascript.png" alt="javascript"></li>
-                                <li><img src="Images/nodejs.png" alt="nodejs"></li>
-                                <li><img src="Images/mongodb.png" alt="mongodb"></li>
-                                <li><img src="Images/java.png" alt="java"></li>
-                                <li><img src="Images/dsa.png" alt="dsa"></li>
+                                <li><img src="resources/images/html.webp" alt="html"></li>
+                                <li><img src="resources/images/css.webp" alt="css"></li>
+                                <li><img src="resources/images/javascript.png" alt="javascript"></li>
+                                <li><img src="resources/images/nodejs.png" alt="nodejs"></li>
+                                <li><img src="resources/images/mongodb.png" alt="mongodb"></li>
+                                <li><img src="resources/images/java.png" alt="java"></li>
+                                <li><img src="resources/images/dsa.png" alt="dsa"></li>
                             </ul>
                         </div>
 
@@ -90,7 +94,7 @@
             </div>
 
             <!-- Projects -->
-            <section class="projects">
+            <section class="projects" id="projects">
                 <h1>A small collection</h1>
                 <h1> of my work.</h1>
 
@@ -98,12 +102,12 @@
                     <!-- Display controls using Javascript -->
                     <div class="video-container">
                         <video autoplay loop muted id="first">
-                            <source src="https://d1ytx91mb072w7.cloudfront.net/compound.mp4" type="video/mp4">
+                            <source src="resources/videos/passwordManager.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-container">
                         <video autoplay loop muted id="sec">
-                            <source src="https://d1ytx91mb072w7.cloudfront.net/starlight.mp4" type="video/mp4">
+                            <source src="resources/videos/imageEditor.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-container">
@@ -120,9 +124,9 @@
                 </div>
             </section>
 
-            <!-- About page -->
             <section class="about-contact">
-                <section class="aboutme">
+                <!-- About -->
+                <section class="aboutme" id="about">
                     <h3 class="title">About Me</h3>
                     <div class="row">
                         <p class="intro">Hello, my name is <span>Namjot Singh.</span></p>
@@ -136,12 +140,12 @@
                 </section>
 
                 <!-- Contact Info -->
-                <section class="contactInfo">
+                <section class="contactInfo" id="contact">
                     <h2 class="title">Contact Information</h2>
 
                     <!-- Form to send a direct message -->
-                    <div class="send-msg">
-                        <form action="" method="POST">
+                    <div class="contact-form-container">
+                        <form id="form">
                             <div>
                                 <label for="name">Full name:</label>
                                 <input type="text" id="name" name="name" required>
@@ -156,7 +160,7 @@
                             </div>
                             <div class="small-font">By submitting this form, you agree to the </div>
                             <div>
-                                <button type="submit">Send</button>
+                                <input id="submit" type="submit" value="Send">
                             </div>
                         </form>
                     </div>
@@ -173,6 +177,8 @@
     </footer>
 
 </body>
+<!-- Load our EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src=" index.js"></script>
 
 </html>
