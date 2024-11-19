@@ -253,7 +253,7 @@ body {
     /* box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); */
     mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
     width: 70%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     margin-left: 80px;
 }
 
@@ -270,12 +270,13 @@ body {
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
 .slides div {
     width: 100%;
+    margin-left: 50px;
 }
 
 .slides ul {
@@ -284,17 +285,9 @@ body {
     list-style-type: none;
 }
 
-.slides li {
-    width: 100%;
-}
-
-.slides img {
-    width: 90px;
-}
-
 .slides img {
     width: 60px;
-    margin: 0 25px;
+    margin: 0 20px;
 }
 
 /* Projects */
@@ -452,6 +445,20 @@ footer p {
 
 footer a {
     color: white;
+}
+
+.scrollbtn {
+    display: none;
+    /* For fade-in / fade-out animation */
+    opacity: 0;
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    background: #000;
+    padding: 10px 13px;
+    border-radius: 100%;
+    transition: opacity 4.3s ease;
 }
 
 /* Responsive */

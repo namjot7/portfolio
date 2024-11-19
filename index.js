@@ -5,10 +5,11 @@
 // const dropMenu = document.querySelector(".nav .dropdown-icon");
 // const navBar = document.querySelector(".nav ul");
 const videos = document.querySelectorAll(".video-container video")
-
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector("#message");
+const scrollbtn = document.querySelector(".scrollbtn");
 console.log(videos);
-
-
 // console.log(navBar);
 
 // Functions
@@ -78,14 +79,42 @@ const sendMail = () => {
         message: document.querySelector("#message").value,
     }
     console.log(formData);
+
     emailjs.send("service_spcsdu6", "template_aozu3fr", formData) // serviceId, templateId, data
-        .then(result => alert("Thank you for reaching out! Your message has been successfully delivered to Namjot. I will respond to you shortly", result))
+        .then(result => {
+            alert("Thank you for reaching out! Your message has been successfully delivered to Namjot. I will respond to you shortly", result);
+
+            // Clear the form after sending the message
+            nameInput.value = "";
+            messageInput.value = "";
+            emailInput.value = "";
+        })
         .catch(err => alert(err))
 }
 
+// Event listeners
 
 // Submit Event
 document.getElementById('form').addEventListener('submit', event => {
     event.preventDefault(); // preventing default form behaviour
     sendMail();
 })
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+    if (window.scrollY > 20) {
+        scrollbtn.style.display = "block";
+        scrollbtn.style.opacity="1";
+    }
+    else {
+        scrollbtn.style.display = "none";
+        scrollbtn.style.opacity="0";
+    }
+};
+
+// Scroll to top button
+scrollbtn.addEventListener('click', e => {
+    console.log("btn clicked");
+    window.scrollTo({top:0,behavior:"smooth"});
+});
